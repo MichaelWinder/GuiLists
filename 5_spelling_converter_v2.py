@@ -1,5 +1,5 @@
 import easygui
-
+import
 
 def nzToUs():
     nzWord = easygui.enterbox("Write the sentence you would like to turn "
