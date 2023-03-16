@@ -70,7 +70,8 @@ def rerollDice(pnum, proll):
 def yahtzee():
     player_1_Dice = []
     player_2_Dice = []
-
+    p1score = 0
+    p2score = 0
     p1name = easygui.enterbox("Enter the name of player 1:", "Player 1")
     p2name = easygui.enterbox("Enter the name of player 2:", "Player 2")
 
@@ -81,8 +82,8 @@ def yahtzee():
     player_1_Dice = rerollDice("1", player_1_Dice)
     player_2_Dice = rerollDice("2", player_2_Dice)
     player_2_Dice = rerollDice("2", player_2_Dice)
-    p1score = finalScore("1", player_1_Dice)
-    p2score = finalScore("2", player_2_Dice)
+    p1score += finalScore("1", player_1_Dice)
+    p2score += finalScore("2", player_2_Dice)
     if p1score > p2score:
         easygui.ynbox(f"The winner is Player 1: {p1name} with a score of"
                       f" {p1score}\n\nPlayer 2: {p2name} scored {p2score}\n\n"
